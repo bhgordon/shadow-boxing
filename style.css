@@ -1,0 +1,241 @@
+
+  :root {
+    --h-offset: 1px;
+    --v-offset: 1px;
+    --blur: 15px;
+    --opacity: 0.3;
+    --box-shadow: 0px 0px 0px rgba(0,0,0,0.0);
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f2;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 0px;
+    color: dimgrey;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #e5e5e5;
+    width: 100vw;
+    background: #fafafa;
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding-left: 40px;
+  }
+
+  .header-text h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .header-text h3 {
+    font-weight: 300;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+ /* .header-icon {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background: lightgrey;
+    margin-right: 40px;
+    animation-name: boxAnimation;
+    animation-duration: 4s;
+  }
+
+  @keyframes boxAnimation {
+    from {box-shadow: 0px 0px rgba(0,0,0,0.0);}
+    to {box-shadow: 5px 4px 12px 0px rgba(84, 84, 84, 0.29);}
+  }
+*/
+  .controls {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px;
+    flex-direction: column;
+  }
+
+ /* .controls-container:first-child {
+    margin-top: 0px;
+  }*/
+
+  .controls-container {
+    margin: 10px;
+    min-width: 250px;
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+  }
+
+  .playground-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .playground {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . . ."
+      ". . . . ."
+      ". . box . ."
+      ". . . . ."
+      ". . reset-btn . .";
+/*    display: flex;
+    justify-content: center;
+    align-items: center;*/
+    margin: 0px;
+    height: 400px;
+    width: 700px;
+    background: white;
+    border-radius: 10px 10px 0px 0px;
+    border: solid 2px lightgrey;
+  }
+
+  .playground-settings-section {
+    display: flex;
+    justify-content: center;
+  }
+
+  .playground-settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    /*border-radius: 0px 0px 10px 10px;*/
+    border: solid 2px lightgrey;
+    border-top: none;
+    border-bottom: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #e6e6e6;
+  }
+
+  .box {
+    /*display: flex;*/
+    grid-area: box;
+    height: 50px;
+    width: 250px;
+    background: lightgrey;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    align-self: center;
+  }
+
+  .controls-box {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin: 0px;
+    border-radius: 10px 10px 0px 0px;
+    background: #fff;
+  }
+
+
+  .reset-btn {
+    color: #4A4A4A;
+    /*border: 1px solid #4A4A4A;*/
+    padding: 8px 24px;
+    border-radius: 50px;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    grid-area: reset-btn;
+    align-self: center;
+    justify-self: center;
+    text-decoration: none;
+    background: white;
+  }
+
+  .reset-btn:hover {
+    opacity: .6;
+  }
+  .value-output p {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    background: #d2d6ca;
+    border-radius: 0px 0px 10px 10px;
+    padding: 5px;
+  }
+
+  .code-output {
+    display: flex;
+    justify-content: center;
+    border: solid 2px lightgrey;
+    min-height: 61px;
+    border-radius: 0px 0px 10px 10px;
+    align-items: center;
+    font-family: "Courier", monospace;
+    background: white;
+  }
+
+/*  #output-field {
+    display: flex;
+    border: solid grey;
+    border-radius: 30px;
+    width: max-content;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 30px;
+    min-width: 400px;
+    min-height: 25px;
+  }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
