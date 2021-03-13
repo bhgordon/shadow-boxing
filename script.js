@@ -20,6 +20,7 @@ const opacityValueOutput = document.querySelector("#opacity-value-output");
 const shadowColorValueOutput = document.querySelector("#shadow-color-value-output");
 const backgroundColorValueOutput = document.querySelector("#background-color-value-output");
 const boxColorValueOutput = document.querySelector("#box-color-value-output");
+const resetBtn = document.querySelector(".reset-btn");
 
 // Input Event Listeners
 inputs.forEach(input => input.addEventListener('change', updateBoxShadow));
@@ -49,13 +50,47 @@ shadowColor.addEventListener('mousemove', shadowColorValueUpdate);
 
 backgroundColor.addEventListener('change', backgroundColorValueUpdate);
 backgroundColor.addEventListener('mousemove', backgroundColorValueUpdate);
+backgroundColor.addEventListener('load', backgroundColorValueUpdate);
 
 boxColor.addEventListener('change', boxColorValueUpdate);
 boxColor.addEventListener('mousemove', boxColorValueUpdate);
 
+resetBtn.addEventListener('click', resetValues);
+
 // Update Functions
-// Very frustrating because I can't seem to use string literals for the element
-// that I want to target, so I need a new function for every fucking element! //
+
+function resetValues() {
+  console.log("working");
+  box.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 1)';
+
+  box.style.background = "#d3d3d3";
+  boxColor.value = "#d3d3d3";
+  boxColorValueOutput.innerText = "#d3d3d3";
+
+  playground.style.background = "#ffffff";
+  backgroundColorValueOutput.innerText = "#ffffff";
+  backgroundColor.value = "#ffffff";
+
+  shadowColor.value = "#000000";
+  shadowColorValueOutput.innerText = "#000000";
+
+  hOffset.value = '0px';
+  hOffsetValueOutput.innerText = '0';
+
+  vOffset.value = '0px';
+  vOffsetValueOutput.innerText = '0';
+
+  blur.value = '0';
+  blurValueOutput.innerText = '0';
+
+  spread.value = '0';
+  spreadValueOutput.innerText = '0';
+
+  opacity.value = 1;
+  opacityValueOutput.innerText = '1';
+
+  codeOutput.innerText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1)";
+}
 
 function hOffsetValueUpdate() {
   hOffsetValueOutput.innerText = `${this.value}`;
