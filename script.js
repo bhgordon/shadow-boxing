@@ -2,8 +2,8 @@
 const inputs = document.querySelectorAll('.controls input');
 const valueOutputs = document.querySelectorAll('#value-output');
 const box = document.querySelector('.box');
-const hOffset = document.querySelector('#h-offset');
-const vOffset = document.querySelector('#v-offset');
+const xOffset = document.querySelector('#x-offset');
+const yOffset = document.querySelector('#y-offset');
 const blur = document.querySelector('#blur');
 const spread = document.querySelector('#spread');
 const opacity = document.querySelector('#opacity');
@@ -12,8 +12,8 @@ const playground = document.querySelector('.playground');
 const codeOutput = document.querySelector('.code-output');
 const boxColor = document.querySelector('#box-color');
 const backgroundColor = document.querySelector("#background-color");
-const hOffsetValueOutput = document.querySelector("#hOffset-value-output");
-const vOffsetValueOutput = document.querySelector("#vOffset-value-output");
+const xOffsetValueOutput = document.querySelector("#xOffset-value-output");
+const yOffsetValueOutput = document.querySelector("#yOffset-value-output");
 const blurValueOutput = document.querySelector("#blur-value-output");
 const spreadValueOutput = document.querySelector("#spread-value-output");
 const opacityValueOutput = document.querySelector("#opacity-value-output");
@@ -30,11 +30,11 @@ boxColor.addEventListener('change', updateBoxColor);
 backgroundColor.addEventListener('change', updatePlaygroundColor);
 
 // Output Event Listeners
-hOffset.addEventListener('change', hOffsetValueUpdate);
-hOffset.addEventListener('mousemove', hOffsetValueUpdate);
+xOffset.addEventListener('change', xOffsetValueUpdate);
+xOffset.addEventListener('mousemove', xOffsetValueUpdate);
 
-vOffset.addEventListener('change', vOffsetValueUpdate);
-vOffset.addEventListener('mousemove', vOffsetValueUpdate);
+yOffset.addEventListener('change', yOffsetValueUpdate);
+yOffset.addEventListener('mousemove', yOffsetValueUpdate);
 
 blur.addEventListener('change', blurValueUpdate);
 blur.addEventListener('mousemove', blurValueUpdate);
@@ -74,11 +74,11 @@ function resetValues() {
   shadowColor.value = "#000000";
   shadowColorValueOutput.innerText = "#000000";
 
-  hOffset.value = '0px';
-  hOffsetValueOutput.innerText = '0';
+  xOffset.value = '0px';
+  xOffsetValueOutput.innerText = '0';
 
-  vOffset.value = '0px';
-  vOffsetValueOutput.innerText = '0';
+  yOffset.value = '0px';
+  yOffsetValueOutput.innerText = '0';
 
   blur.value = '0';
   blurValueOutput.innerText = '0';
@@ -92,12 +92,12 @@ function resetValues() {
   codeOutput.innerText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1)";
 }
 
-function hOffsetValueUpdate() {
-  hOffsetValueOutput.innerText = `${this.value}`;
+function xOffsetValueUpdate() {
+  xOffsetValueOutput.innerText = `${this.value}`;
 }
 
-function vOffsetValueUpdate() {
-  vOffsetValueOutput.innerText = `${this.value}`;
+function yOffsetValueUpdate() {
+  yOffsetValueOutput.innerText = `${this.value}`;
 }
 
 function blurValueUpdate() {
@@ -125,7 +125,7 @@ function boxColorValueUpdate() {
 }
 
 function updateBoxShadow() {
-  const boxShadow = `${hOffset.value}px ${vOffset.value}px ${blur.value}px ${spread.value}px rgba(${hexToRGB(shadowColor.value).join(", ")}, ${opacity.value})`;
+  const boxShadow = `${xOffset.value}px ${yOffset.value}px ${blur.value}px ${spread.value}px rgba(${hexToRGB(shadowColor.value).join(", ")}, ${opacity.value})`;
   box.style.boxShadow = boxShadow;
   codeOutput.innerText = `box-shadow: ${boxShadow}`;
 };
