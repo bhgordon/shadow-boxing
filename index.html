@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  </style>
+  <title>Shadow Boxing</title>
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-text">
+      <h2>shadow boxing</h2>
+      <h3>create box shadows that don't suck</h3>
+    </div>
+    <!-- <div class="header-icon"></div> -->
+  </div>
+
+  <main>
+
+    <div class="playground-section">
+
+      <div class="playground">
+        <div class="box"></div>
+        <a class="reset-btn" href="file:///Users/bengordon/Desktop/shadow_boxing/shadow_boxing.html">reset</a>
+      </div>
+
+      <div class="playground-settings-section">
+        <div class="playground-settings">
+
+          <div class="controls-container">
+            <div class="controls-box">
+              <label for="color">background color</label>
+              <input id="background-color" type="color" name="color" value="#ffffff">
+            </div>
+            <div class="value-output">
+              <p id="background-color-value-output">#ffffff</p>
+            </div>
+          </div>
+
+          <div class="controls-container">
+            <div class="controls-box">
+              <label for="color">box color</label>
+              <input id="box-color" type="color" name="color" value="#d3d3d3">
+            </div>
+            <div class="value-output">
+              <p id="box-color-value-output">#d3d3d3</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="code-output">
+        <p>box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1)</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="controls-container">
+        <div class="controls-box">
+          <label for="h-offset">h-offset</label>
+          <input id="h-offset" type="range" name="h-offset" min='-50' max='50' value="0" data-sizing="px">
+        </div>
+        <div class="value-output">
+          <p id="hOffset-value-output">0</p>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="controls-box">
+          <label for="v-offset">v-offset</label>
+          <input id="v-offset" type="range" name="v-offset" min='-50' max='50' value="0" data-sizing="px">
+        </div>
+        <div class="value-output">
+          <p id="vOffset-value-output">0</p>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="controls-box">
+          <label for="blur">blur</label>
+          <input id="blur" type="range" name="blur" min='0' max='50' value="0" data-sizing="px">
+        </div>
+        <div class="value-output">
+          <p id="blur-value-output">0</p>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="controls-box">
+          <label for="spread">spread</label>
+          <input id="spread" type="range" name="spread" min='0' max='30' value="0" data-sizing="px">
+        </div>
+        <div class="value-output">
+          <p id="spread-value-output">0</p>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="controls-box">
+          <label for="opacity">opacity</label>
+          <input id="opacity" type="range" name="opacity" step='0.01' min='0' max='1' value="1" data-sizing="px">
+        </div>
+        <div class="value-output">
+          <p id="opacity-value-output">1</p>
+        </div>
+      </div>
+
+      <div class="controls-container">
+        <div class="controls-box">
+          <label for="color">shadow color</label>
+          <input id="shadow-color" type="color" name="color" value="#000000">
+        </div>
+        <div class="value-output">
+          <p id="shadow-color-value-output">#000000</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
