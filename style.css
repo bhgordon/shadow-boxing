@@ -175,6 +175,8 @@
 
   .reset-btn:hover {
     opacity: .6;
+    cursor: pointer;
+
   }
   .value-output p {
     margin: 0px;
