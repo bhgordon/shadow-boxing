@@ -54,32 +54,12 @@
     margin-bottom: 10px;
   }
 
- /* .header-icon {
-    display: flex;
-    height: 50px;
-    width: 50px;
-    border-radius: 10px;
-    background: lightgrey;
-    margin-right: 40px;
-    animation-name: boxAnimation;
-    animation-duration: 4s;
-  }
-
-  @keyframes boxAnimation {
-    from {box-shadow: 0px 0px rgba(0,0,0,0.0);}
-    to {box-shadow: 5px 4px 12px 0px rgba(84, 84, 84, 0.29);}
-  }
-*/
   .controls {
     display: flex;
     justify-content: space-evenly;
     margin: 25px;
     flex-direction: column;
   }
-
- /* .controls-container:first-child {
-    margin-top: 0px;
-  }*/
 
   .controls-container {
     margin: 10px;
@@ -106,9 +86,6 @@
       ". . box . ."
       ". . . . ."
       ". . reset-btn . .";
-/*    display: flex;
-    justify-content: center;
-    align-items: center;*/
     margin: 0px;
     height: 400px;
     width: 700px;
@@ -127,7 +104,6 @@
     justify-content: center;
     align-items: center;
     width: 700px;
-    /*border-radius: 0px 0px 10px 10px;*/
     border: solid 2px lightgrey;
     border-top: none;
     border-bottom: none;
@@ -137,7 +113,6 @@
   }
 
   .box {
-    /*display: flex;*/
     grid-area: box;
     height: 50px;
     width: 250px;
@@ -161,7 +136,6 @@
 
   .reset-btn {
     color: #4A4A4A;
-    /*border: 1px solid #4A4A4A;*/
     padding: 8px 24px;
     border-radius: 50px;
     opacity: 0.4;
@@ -209,6 +183,8 @@
     font-size: 20px;
     margin-left: 10px;
     transition: background .5s;
+    transition: transform .5s;
+
   }
 
   #copy-btn:hover {
@@ -217,6 +193,7 @@
 
   #copy-btn.success {
     background: green;
+    transform: scale(1.05);
   }
 
 
