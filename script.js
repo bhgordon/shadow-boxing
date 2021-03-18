@@ -9,7 +9,8 @@ const spread = document.querySelector('#spread');
 const opacity = document.querySelector('#opacity');
 const shadowColor = document.querySelector('#shadow-color');
 const playground = document.querySelector('.playground');
-const codeOutput = document.querySelector('.code-output');
+const codeOutputText = document.querySelector('#code-output-text');
+const copyBtn = document.querySelector("#copy-btn");
 const boxColor = document.querySelector('#box-color');
 const backgroundColor = document.querySelector("#background-color");
 const xOffsetValueOutput = document.querySelector("#xOffset-value-output");
@@ -57,6 +58,8 @@ boxColor.addEventListener('mousemove', boxColorValueUpdate);
 
 resetBtn.addEventListener('click', resetValues);
 
+copyBtn.addEventListener('click', copyToClipboard);
+
 // Update Functions
 
 function resetValues() {
@@ -89,7 +92,7 @@ function resetValues() {
   opacity.value = 1;
   opacityValueOutput.innerText = '1';
 
-  codeOutput.innerText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1)";
+  codeOutputText.innerText = "box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);";
 }
 
 function xOffsetValueUpdate() {
@@ -127,7 +130,7 @@ function boxColorValueUpdate() {
 function updateBoxShadow() {
   const boxShadow = `${xOffset.value}px ${yOffset.value}px ${blur.value}px ${spread.value}px rgba(${hexToRGB(shadowColor.value).join(", ")}, ${opacity.value})`;
   box.style.boxShadow = boxShadow;
-  codeOutput.innerText = `box-shadow: ${boxShadow}`;
+  codeOutputText.innerText = `box-shadow: ${boxShadow};`;
 };
 
 function updateBoxColor() {
@@ -138,6 +141,18 @@ function updateBoxColor() {
 function updatePlaygroundColor() {
   const newColor = this.value;
   playground.style.background = newColor;
+}
+
+
+// Copy to clipboard function
+
+function copyToClipboard() {
+  navigator.clipboard.writeText(codeOutputText.textContent)
+  .then(function() {
+  /* clipboard successfully set */
+  }, function() {
+  /* clipboard write failed */
+});
 }
 
 // Hex function
