@@ -150,6 +150,10 @@ function copyToClipboard() {
   navigator.clipboard.writeText(codeOutputText.textContent)
   .then(function() {
   /* clipboard successfully set */
+  copyBtn.classList.add("success");
+  setTimeout(() => {
+    copyBtn.classList.remove("success");
+  }, 2000);
   }, function() {
   /* clipboard write failed */
 });
