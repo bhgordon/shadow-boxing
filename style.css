@@ -227,6 +227,38 @@
     opacity: 0.8;
   }
 
+  /* color picker */
+  .controls-box input[type="color"]{
+    cursor: pointer;
+  }
+
+
+  /* slider */
+
+  .controls-box input[type="range"] {
+    -webkit-appearance: none !important;
+    width: 125px;
+    height: 2px;
+    outline: none;
+    background: lightgrey;
+    cursor: pointer;
+  }
+
+  .controls-box input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #696969;
+    transition: all .5s;
+  }
+
+  .controls-box input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+  }
+
+
 
 
 
