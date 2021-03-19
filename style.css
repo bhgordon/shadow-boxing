@@ -258,6 +258,17 @@
     opacity: 0.9;
   }
 
+  .controls-box input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none !important;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    background: #696969;
+    transition: all .5s;
+  }
+
+
 
 
 
