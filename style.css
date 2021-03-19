@@ -10,10 +10,10 @@
   body {
     display: flex;
     flex-direction: column;
-    background: #4f4f4f;
+    background: #eeeaea;
     font-family: 'Manrope', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 14px;
     margin: 0px;
     color: dimgrey;
   }
@@ -66,13 +66,46 @@
     min-width: 250px;
     max-width: 250px;
     border-radius: 10px;
-    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+    transition: all .2s;
+    border: solid 2px lightgrey;
+    box-sizing: border-box;
+
+  }
+
+  .controls-container:hover {
+    box-shadow: 5px 6px 10px 0px rgba(0, 0, 0, 0.33);
+  }
+
+  .controls-box {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
+    margin: 0px;
+    border-radius: 8px 8px 0px 0px;
+    background: white;
+    height: 25px;
+    align-items: center;
+  }
+
+  .value-output p {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    background: lightgrey;
+    border-radius: 0px 0px 5px 5px;
+    padding: 5px;
+    height: 25px;
+    align-items: center;
+    border-top: solid 2px lightgrey;
   }
 
   .playground-section {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-left: 25px;
   }
 
   .playground {
@@ -87,7 +120,7 @@
       ". . . . ."
       ". . reset-btn . .";
     margin: 0px;
-    height: 400px;
+    height: 390px;
     width: 700px;
     background: white;
     border-radius: 10px 10px 0px 0px;
@@ -109,7 +142,7 @@
     border-bottom: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    background: #3a3a3a;
+    background: #ffffff;
   }
 
   .box {
@@ -121,18 +154,6 @@
     box-shadow: var(--box-shadow);
     align-self: center;
   }
-
-  .controls-box {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 15px;
-    margin: 0px;
-    border-radius: 10px 10px 0px 0px;
-    background: #fff;
-  }
-
 
   .reset-btn {
     color: #4A4A4A;
@@ -150,64 +171,61 @@
   .reset-btn:hover {
     opacity: .6;
     cursor: pointer;
-
-  }
-  .value-output p {
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    background: #d2d6ca;
-    border-radius: 0px 0px 10px 10px;
-    padding: 5px;
   }
 
   .code-output {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border: solid 2px lightgrey;
     min-height: 61px;
     border-radius: 0px 0px 10px 10px;
     align-items: center;
-    font-family: "Courier", monospace;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 400;
     background: white;
+    height: 95px;
   }
 
-  #copy-btn {
-    border-radius: 15px;
-    background: #727272;
-    color: white;
-    border: none;
+  .copy-btn {
+    border-radius: 30px;
+    background: #ffffff;
+    color: dimgrey;
+    border: solid 2px lightgrey;
     height: 30px;
-    width: 50px;
+    width: 70px;
     outline: none;
-    font-size: 20px;
-    margin-left: 10px;
-    transition: background .5s;
-    transition: transform .5s;
-
+    transition: all .5s;
+    font-size: 18px;
+    margin-bottom: 2px;
+    position: relative;
+    display: inline-block;
   }
 
-  #copy-btn:hover {
-    background: #4a4a4a;
+  .copy-btn:hover {
+    background: lightgrey;
   }
 
-  #copy-btn.success {
-    background: green;
-    transform: scale(1.05);
+  .copy-btn.success {
+    background: #c6dab7;
+    border: solid 2px #c6dab7;
   }
 
+  .tooltip-text {
+    visibility: hidden;
+    font-family: "Manrope", sans-serif;
+    position: absolute;
+    font-size: 14px;
+    left: 125%;
+    color: #4a4a4a;
+    opacity: 0;
+    transition: opacity .2s;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
+   .tooltip-text.success {
+    visibility: visible;
+    opacity: 0.8;
+  }
 
 
 

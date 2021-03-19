@@ -10,7 +10,8 @@ const opacity = document.querySelector('#opacity');
 const shadowColor = document.querySelector('#shadow-color');
 const playground = document.querySelector('.playground');
 const codeOutputText = document.querySelector('#code-output-text');
-const copyBtn = document.querySelector("#copy-btn");
+const copyBtn = document.querySelector(".copy-btn");
+const tooltipText = document.querySelector(".tooltip-text");
 const boxColor = document.querySelector('#box-color');
 const backgroundColor = document.querySelector("#background-color");
 const xOffsetValueOutput = document.querySelector("#xOffset-value-output");
@@ -151,9 +152,12 @@ function copyToClipboard() {
   .then(function() {
   /* clipboard successfully set */
   copyBtn.classList.add("success");
+  tooltipText.classList.add("success");
   setTimeout(() => {
     copyBtn.classList.remove("success");
+    tooltipText.classList.remove("success");
   }, 2000);
+
   }, function() {
   /* clipboard write failed */
 });
