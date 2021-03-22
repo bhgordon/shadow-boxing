@@ -73,7 +73,7 @@
   }
 
   .controls-container:hover {
-    box-shadow: 5px 6px 10px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 5px 5px 11px 2px rgba(0, 0, 0, 0.2);
   }
 
   .controls-box {
