@@ -187,6 +187,10 @@
     height: 95px;
   }
 
+  #code-output-text {
+    min-width: 385px;
+  }
+
   .copy-btn {
     border-radius: 30px;
     background: #ffffff;
